@@ -3,7 +3,8 @@
 
 This is a Pytorch 1.0 implementation of [Mask R-CNN](https://arxiv.org/abs/1703.06870) that is based on https://github.com/darolt/mask_rcnn.
 
-
+The difference:
+* Add support to Python3
 
 to train the network use:
 python samples/nuclei.py train --dataset=path_to_dataset --model=coco
