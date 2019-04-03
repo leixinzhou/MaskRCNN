@@ -1,7 +1,7 @@
 # mask-rcnn
 
 
-This is a Pytorch 1.0 implementation of [Mask R-CNN](https://arxiv.org/abs/1703.06870) that is based on https://github.com/darolt/mask_rcnn - automatic!
+This is a Pytorch 1.0 implementation of [Mask R-CNN](https://arxiv.org/abs/1703.06870) that is based on https://github.com/darolt/mask_rcnn.
 
 
 
