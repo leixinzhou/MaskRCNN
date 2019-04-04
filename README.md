@@ -16,4 +16,5 @@ to check Kaggle's 2018 Databowl metric on a dataset use:
 python samples/nuclei.py metric --dataset=path_to_dataset --model=path_to_trained_model
 
 for installation instructions, just export mrcnn directory to PYTHONPATH and run:
-python setup.py install
+python3 setup.py install # or python3 setup.py install --prefix=your_dir
+

@@ -1,0 +1,11 @@
+README.md
+setup.py
+./mrcnn/models/components/nms/nms_cuda.cu
+./mrcnn/models/components/nms/nms_wrapper.cpp
+./mrcnn/models/components/roialign/crop_and_resize_gpu.cpp
+./mrcnn/models/components/roialign/crop_and_resize_kernel.cu
+MaskRCNN.egg-info/PKG-INFO
+MaskRCNN.egg-info/SOURCES.txt
+MaskRCNN.egg-info/dependency_links.txt
+MaskRCNN.egg-info/top_level.txt
+mrcnn/__init__.py
