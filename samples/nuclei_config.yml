@@ -1,13 +1,13 @@
 ---
 # Configuration for training on the nucleus segmentation dataset.
 
-DEVICE: cuda:1
+DEVICE: cuda:3
 
 NAME: nuclei
 
 NUM_CLASSES: 2
 
-DATASET_PATH: /home/jro/wk/kaggle/input/
+DATASET_PATH: /home/leizhou/Documents/instance_seg/data/DSB_18/
 
 IMAGES_PER_GPU : 6
 

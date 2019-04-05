@@ -1,0 +1,85 @@
+BACKBONE:
+  NAME: resnet50
+  SHAPES: "[[128 128]\n [ 64  64]\n [ 32  32]\n [ 16  16]\n [  8   8]]"
+  STRIDES:
+  - 4
+  - 8
+  - 16
+  - 32
+  - 64
+BBOX_STD_DEV: tensor([0.1000, 0.1000, 0.2000, 0.2000], device='cuda:3')
+DATASET_PATH: ../../data/DSB_18/
+DEFAULT_CONFIG_FN: ./mrcnn/config/base_config.yml
+DETECTION:
+  MAX_INSTANCES: '100'
+  MIN_CONFIDENCE: '0.7'
+  NMS_THRESHOLD: '0.3'
+DEVICE: cuda:3
+DEVICE_NB: '3'
+GPU_COUNT: '1'
+HEADS:
+  MASK:
+    POOL_SIZE: '14'
+    SHAPE:
+    - 28
+    - 28
+  POOL_SIZE: '7'
+IMAGE:
+  MAX_DIM: '512'
+  MEAN_PIXEL:
+  - 55.0
+  - 55.0
+  - 55.0
+  MIN_DIM: '512'
+  MIN_SCALE: '0'
+  RESIZE_MODE: crop
+  SHAPE: '[512 512   3]'
+IMAGENET_FILE_NAME: resnet50_imagenet.pth
+IMAGES_PER_GPU: '6'
+MINI_MASK:
+  SHAPE:
+  - 56
+  - 56
+  USE: 'True'
+NAME: nuclei
+NUM_CLASSES: '2'
+PROPOSALS:
+  MAX_GT_INSTANCES: '200'
+  POST_NMS_ROIS:
+    INFERENCE: '2000'
+    TRAINING: '2000'
+  PRE_NMS_LIMIT: '6000'
+  ROI_POSITIVE_RATIO: '0.33'
+  TRAIN_ROIS_PER_IMAGE: '128'
+RPN:
+  ANCHOR:
+    NB_PER_IMAGE: '256'
+    RATIOS:
+    - 0.5
+    - 1
+    - 2
+    SCALES:
+    - 32
+    - 64
+    - 128
+    - 256
+    - 512
+    STRIDE: '1'
+  BBOX_STD_DEV:
+  - 0.1
+  - 0.1
+  - 0.2
+  - 0.2
+  BBOX_STD_DEV_GPU: tensor([[0.1000, 0.1000, 0.2000, 0.2000]], device='cuda:3')
+  CLIP_WINDOW: '[  0.   0. 512. 512.]'
+  NMS_THRESHOLD: '0.9'
+  NORM: tensor([512., 512., 512., 512.], device='cuda:3')
+  USE_RPN_ROIS: 'True'
+TRAINING:
+  BATCH_SIZE: '6'
+  LEARNING:
+    MOMENTUM: '0.9'
+    RATE: '0.0001'
+  STEPS_PER_EPOCH: '105'
+  VALIDATION_STEPS: '4'
+  WEIGHT_DECAY: '0.005'
