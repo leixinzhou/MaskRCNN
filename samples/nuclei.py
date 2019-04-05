@@ -77,6 +77,7 @@ if __name__ == '__main__':
         configs.append('./samples/nuclei_config_inference.yml')
     mrcnn_config.init_config(configs, args)
 
+    # Multiple GPU support needs to change here, by leixin
     with torch.cuda.device(Config.DEVICE_NB):
         # Create model
         model = modellib.MaskRCNN(model_dir=args.logs)

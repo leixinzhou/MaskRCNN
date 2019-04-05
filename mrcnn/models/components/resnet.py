@@ -1,4 +1,5 @@
 import torch.nn as nn
+import torch
 
 from mrcnn.utils.utils import SamePad2d
 
@@ -75,7 +76,8 @@ class ResNet(nn.Module):
         x = self.C2(x)
         x = self.C3(x)
         x = self.C4(x)
-        x = self.C5(x)
+        if self.C5 is not None:
+            x = self.C5(x)
         return x
 
     def stages(self):
@@ -98,3 +100,7 @@ class ResNet(nn.Module):
             layers.append(block(self.inplanes, planes))
 
         return nn.Sequential(*layers)
+
+if __name__ == "__main__":
+    a = ResNet("resnet101")
+    print(a)

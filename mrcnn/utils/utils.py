@@ -552,6 +552,7 @@ def set_intersection(tensor1, tensor2):
     return aux[:-1][(aux[1:] == aux[:-1]).detach()]
 
 
+
 class SamePad2d(nn.Module):
     """Mimics tensorflow's 'SAME' padding."""
 
@@ -563,7 +564,7 @@ class SamePad2d(nn.Module):
     def forward(self, input):
         in_width = input.size()[2]
         in_height = input.size()[3]
-        out_width = math.ceil(float(in_width) / float(self.stride[-1]))
+        out_width = math.ceil(float(in_width) / float(self.stride[0]))
         out_height = math.ceil(float(in_height) / float(self.stride[1]))
         pad_along_width = ((out_width - 1) * self.stride[0] +
                            self.kernel_size[0] - in_width)
@@ -578,3 +579,9 @@ class SamePad2d(nn.Module):
 
     def __repr__(self):
         return self.__class__.__name__
+
+if __name__ == "__main__":
+    a = torch.zeros((1,1,5,4), dtype=torch.float)
+    padder = SamePad2d(3, (1,1))
+    b = padder(a)
+    print(b.size())
