@@ -7,14 +7,14 @@ The difference:
 * Add support to Python3
 
 to train the network use:
-python samples/nuclei.py train --dataset=path_to_dataset --model=coco
+python3 samples/nuclei.py train --dataset=path_to_dataset --model=coco
 
 to detect use:
-python samples/nuclei.py submit --dataset=path_to_dataset --model=path_to_trained_model
+python3 samples/nuclei.py submit --dataset=path_to_dataset --model=path_to_trained_model
 
 to check Kaggle's 2018 Databowl metric on a dataset use:
-python samples/nuclei.py metric --dataset=path_to_dataset --model=path_to_trained_model
+python3 samples/nuclei.py metric --dataset=path_to_dataset --model=path_to_trained_model
 
 for installation instructions, just export mrcnn directory to PYTHONPATH and run:
-python3 setup.py install # or python3 setup.py install --prefix=your_dir
+python3 setup.py install or python3 setup.py install --prefix=your_dir
 

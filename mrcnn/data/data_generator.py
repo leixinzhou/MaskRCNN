@@ -60,7 +60,7 @@ def load_image_gt(dataset_handler, image_id, use_mini_mask=False,
         mask_shape = mask.shape
         # Make augmenters deterministic to apply similarly to images and masks
         det = augmentation.to_deterministic()
-        image = det.augment_image(image)
+        image = det.augment_image(image.astype(np.float32))
         # Change mask to np.uint8 because imgaug doesn't support np.bool
         mask = det.augment_image(mask.astype(np.uint8),
                                  hooks=imgaug.HooksImages(activator=hook))

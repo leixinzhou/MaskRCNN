@@ -2,8 +2,8 @@
 import torch
 from torch.autograd import Function
 
-from mrcnn.models.components.roialign import crop_and_resize  # pylint: disable=E0401,E0611
-
+# from mrcnn.models.components.roialign import crop_and_resize  # pylint: disable=E0401,E0611
+import crop_and_resize
 
 class CropAndResizeFunction(Function):
 

@@ -1,5 +1,6 @@
 
-from mrcnn.models.components.nms import nms_wrapper  # pylint: disable=E0611
+# from mrcnn.models.components.nms import nms_wrapper  # pylint: disable=E0611
+import nms_wrapper
 from mrcnn.utils import utils
 from tools.config import Config
 from tools.time_profiling import profilable

@@ -2,7 +2,8 @@
 import torch
 
 from tools.config import Config
-from mrcnn.models.components.nms import nms_wrapper  # pylint: disable=E0401,E0611
+# from mrcnn.models.components.nms import nms_wrapper  # pylint: disable=E0401,E0611
+import nms_wrapper
 from mrcnn.utils import utils
 from mrcnn.utils.exceptions import NoBoxToKeep
 
