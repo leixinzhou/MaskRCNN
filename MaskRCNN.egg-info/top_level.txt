@@ -1,2 +1,0 @@
-crop_and_resize
-nms_wrapper
