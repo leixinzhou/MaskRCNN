@@ -2,3 +2,4 @@ build/
 logs/
 *egg*/
 dist/
+.vscode/
