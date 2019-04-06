@@ -73,7 +73,7 @@ def submit(model, dataset, results_dir, analyzer=None):
         fig = visualize.display_instances(
             image, result.rois, result.masks, result.class_ids,
             dataset.class_names, result.scores,
-            show_bbox=True, show_mask_pixels=False,
+            show_bbox=False, show_mask_pixels=False,
             title=f"Predictions for {image_name}")
         fig.savefig(f"{submit_dir}/{image_name}.png")
         matplotlib.pyplot.close()

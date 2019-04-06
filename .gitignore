@@ -3,3 +3,4 @@ logs/
 *egg*/
 dist/
 .vscode/
+results/

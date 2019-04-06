@@ -24,10 +24,11 @@ def train(model, dataset_train, dataset_val):
 
     # If starting from imagenet, train heads only for a bit
     # since they have random weights
-    logging.info('Train network heads')
-    model.fit(dataset_train, dataset_val,
-              Config.TRAINING.LEARNING.RATE,
-              20, 'heads', augmentation=augmentation)
+    # edit by leixin, we start from scratch
+    # logging.info('Train network heads')
+    # model.fit(dataset_train, dataset_val,
+    #           Config.TRAINING.LEARNING.RATE,
+    #           20, 'heads', augmentation=augmentation)
 
     logging.info('Train all layers')
     model.fit(dataset_train, dataset_val,

@@ -3,6 +3,7 @@
 GPU_COUNT: 1
 IMAGES_PER_GPU: 1
 
+DATASET_PATH: /home/leizhou/Documents/instance_seg/data/DSB_18/
 # Don't resize image during inference
 IMAGE:
     RESIZE_MODE: pad64

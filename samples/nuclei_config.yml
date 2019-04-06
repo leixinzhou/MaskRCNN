@@ -9,13 +9,13 @@ NUM_CLASSES: 2
 
 DATASET_PATH: /home/leizhou/Documents/instance_seg/data/DSB_18/
 
-IMAGES_PER_GPU : 6
+IMAGES_PER_GPU : 2
 
 RPN:
     NMS_THRESHOLD: 0.9
     ANCHOR:
-#        SCALES: [10, 20, 40, 60, 80]
-        SCALES: [32, 64, 128, 256, 512]
+        SCALES: [10, 20, 40, 60, 80]
+        # SCALES: [32, 64, 128, 256, 512]
         RATIOS: [0.5, 1, 2]
 
 IMAGE:

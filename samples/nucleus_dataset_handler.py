@@ -97,7 +97,6 @@ class NucleusDatasetHandler(DatasetHandler):
         # Get mask directory from image path
         mask_dir = os.path.join(
             os.path.dirname(os.path.dirname(info['path'])), 'masks')
-
         # Read mask files from .png image
         masks = []
         for file in next(os.walk(mask_dir))[2]:
